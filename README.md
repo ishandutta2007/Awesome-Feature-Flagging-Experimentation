@@ -124,7 +124,7 @@ Self-hosted, transparent, and community-driven feature flagging and experimentat
 
 ### ⭐ Open-Source Leaderboard (Ranked by Stars)
 
-| Repository & Platform 📦 | GitHub Stars 🌟 | Stack / Language 💻 | License 📜 | Specialization 🎯 |
+| Repository & Platform 📦 | GitHub_Stars 🌟 | Stack / Language 💻 | License 📜 | Specialization 🎯 |
 |:---|:---|:---|:---|:---|
 | **[PostHog](https://github.com/PostHog/posthog)** | [![PostHog Stars](https://img.shields.io/github/stars/PostHog/posthog?style=social&color=white)](https://github.com/PostHog/posthog/stargazers) | Python, TypeScript, ClickHouse | MIT (Open Core) | Product analytics, session replays, feature flags & experimentation suite |
 | **[Unleash](https://github.com/Unleash/unleash)** | [![Unleash Stars](https://img.shields.io/github/stars/Unleash/unleash?style=social&color=white)](https://github.com/Unleash/unleash/stargazers) | Node.js, TypeScript, PostgreSQL | Apache-2.0 (Open Core) | Battle-tested enterprise feature toggle service with Unleash Edge proxy |
@@ -265,7 +265,7 @@ Contributions are warmly encouraged! 🎉
 If you know of a top-tier feature flagging or experimentation platform that should be added:
 1. Fork this repository.
 2. Create a new branch: `git checkout -b add-awesome-tool`.
-3. Add the project with details (GitHub star badge linking to stargazers, stack, license, pricing, and unique capabilities).
+3. Add the project with details (GitHub Stars_Badge linking to stargazers, stack, license, pricing, and unique capabilities).
 4. Submit a Pull Request with a clear description.
 
 ---
