@@ -5,10 +5,12 @@
 # 🚩 Awesome Feature Flagging & Experimentation 🧪
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-blue.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)
 [![Topic: Feature Flags](https://img.shields.io/badge/topic-feature--flags-indigo.svg)](https://github.com/topics/feature-flags)
 [![Topic: Experimentation](https://img.shields.io/badge/topic-experimentation-pink.svg)](https://github.com/topics/experimentation)
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
 **The definitive curated index of top Feature Flagging, Feature Toggle, Progressive Delivery, and Experimentation (A/B Testing) platforms — comparing SaaS commercial titans and self-hosted open-source software (OSS) solutions.**
 
@@ -46,6 +48,8 @@
     - [11. FF4J (Feature Flags for Java)](#11-ff4j-feature-flags-for-java)
     - [12. Bucketeer](#12-bucketeer)
 - [📊 Comparison at a Glance](#-comparison-at-a-glance)
+- [📈 Star History](#-star-history)
+- [💖 Support & Sponsorship](#-support--sponsorship)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 
@@ -235,6 +239,22 @@ Self-hosted, transparent, and community-driven feature flagging and experimentat
 | **FeatureProbe** | Apache-2.0 | Self-Host | ✅ | ⚠️ Basic | Rust-powered low-latency evaluation |
 | **FF4J** | Apache-2.0 | Embedded | ✅ | ⚠️ Basic | Enterprise Spring & Java architectures |
 | **Bucketeer** | Apache-2.0 | Self-Host | ✅ | ⚠️ Basic | Scaled mobile feature delivery |
+
+---
+
+##  Star History
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Feature-Flagging-Experimentation&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Feature-Flagging-Experimentation&type=date&legend=top-left)
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you so much for visiting and using this curated guide! If you find this repository valuable for your team, personal workflows, or architecture research, please consider supporting the project:
+
+- ⭐ **Star this repository** to show appreciation and boost visibility on GitHub.
+- 🍴 **Fork the repo** and contribute new tools, SDKs, or updates.
+- 📢 **Share it** with friends, team members, and the developer community on Twitter/X, LinkedIn, or Reddit.
+- ☕ **Buy me a coffee / Sponsor**: If you'd like to support ongoing maintenance and new awesome developer resources, please consider becoming a sponsor via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
 
 ---
 
