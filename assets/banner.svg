@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#0b0f19; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="primary-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <linearGradient id="badge-green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <filter id="blur-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="40" result="blur"/>
+    </filter>
+
+    <filter id="subtle-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulse {
+      0% { opacity: 0.3; transform: scale(0.98); }
+      50% { opacity: 0.65; transform: scale(1.02); }
+      100% { opacity: 0.3; transform: scale(0.98); }
+    }
+    @keyframes float-toggle {
+      0% { transform: translateX(0px); }
+      50% { transform: translateX(28px); }
+      100% { transform: translateX(0px); }
+    }
+    @keyframes float-toggle-reverse {
+      0% { transform: translateX(28px); }
+      50% { transform: translateX(0px); }
+      100% { transform: translateX(28px); }
+    }
+    @keyframes stream {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes node-pulse {
+      0%, 100% { r: 6; opacity: 0.6; }
+      50% { r: 9; opacity: 1; }
+    }
+    .pulsing-orb {
+      animation: pulse 8s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .toggle-anim-1 {
+      animation: float-toggle 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    .toggle-anim-2 {
+      animation: float-toggle-reverse 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    .pulse-node {
+      animation: node-pulse 3s ease-in-out infinite;
+    }
+    .data-wire {
+      stroke-dasharray: 8 6;
+      animation: stream 20s linear infinite;
+    }
+  </style>
+
+  <!-- Deep Background Layer -->
+  <rect width="100%" height="100%" fill="url(#bg-grad)"/>
+
+  <!-- Dynamic / Animated Ambient Glow Orbs in Background -->
+  <circle cx="150" cy="80" r="140" fill="#6366f1" opacity="0.25" filter="url(#blur-glow)" class="pulsing-orb"/>
+  <circle cx="1050" cy="280" r="160" fill="#ec4899" opacity="0.2" filter="url(#blur-glow)" class="pulsing-orb"/>
+  <circle cx="950" cy="70" r="120" fill="#06b6d4" opacity="0.2" filter="url(#blur-glow)" class="pulsing-orb"/>
+
+  <!-- Subtle Matrix / Circuit Grid in Background -->
+  <g opacity="0.12" stroke="#64748b" stroke-width="1">
+    <path d="M 0 60 H 1200 M 0 120 H 1200 M 0 180 H 1200 M 0 240 H 1200 M 0 300 H 1200"/>
+    <path d="M 150 0 V 360 M 300 0 V 360 M 450 0 V 360 M 600 0 V 360 M 750 0 V 360 M 900 0 V 360 M 1050 0 V 360"/>
+  </g>
+
+  <!-- Animated Feature Flag & Experimentation Flow Diagram Elements (Left & Right Flanks) -->
+  <!-- Left Side: Interactive Feature Flag Switches -->
+  <g transform="translate(60, 110)" filter="url(#subtle-shadow)">
+    <!-- Switch 1 Container -->
+    <rect x="0" y="0" width="90" height="46" rx="23" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <rect x="3" y="3" width="84" height="40" rx="20" fill="#0f172a" opacity="0.8"/>
+    <!-- Switch Knob (Animated) -->
+    <g class="toggle-anim-1">
+      <circle cx="23" cy="23" r="17" fill="url(#primary-glow)"/>
+      <path d="M 18 23 L 22 27 L 29 19" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="105" y="28" fill="#94a3b8" font-size="13" font-weight="600" letter-spacing="1">CANARY_V2</text>
+  </g>
+
+  <g transform="translate(40, 190)" filter="url(#subtle-shadow)">
+    <!-- Switch 2 Container -->
+    <rect x="0" y="0" width="80" height="40" rx="20" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <g class="toggle-anim-2">
+      <circle cx="20" cy="20" r="14" fill="#3b82f6"/>
+      <circle cx="20" cy="20" r="5" fill="#ffffff"/>
+    </g>
+    <text x="95" y="25" fill="#64748b" font-size="12" font-weight="600">DARK_LAUNCH</text>
+  </g>
+
+  <!-- Right Side: A/B Experimentation Split Graph -->
+  <g transform="translate(980, 95)" filter="url(#subtle-shadow)">
+    <!-- Main Inflow Node -->
+    <rect x="0" y="35" width="45" height="30" rx="6" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+    <text x="12" y="54" fill="#a5b4fc" font-size="11" font-weight="700">100%</text>
+
+    <!-- Branch A (Control 50%) -->
+    <path d="M 45 45 C 80 45, 90 15, 120 15" fill="none" stroke="#6366f1" stroke-width="2" class="data-wire"/>
+    <rect x="120" y="0" width="65" height="30" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="130" y="19" fill="#93c5fd" font-size="11" font-weight="600">Var A 50%</text>
+
+    <!-- Branch B (Treatment 50%) -->
+    <path d="M 45 55 C 80 55, 90 85, 120 85" fill="none" stroke="#ec4899" stroke-width="2" class="data-wire"/>
+    <rect x="120" y="70" width="65" height="30" rx="6" fill="#1e293b" stroke="#ec4899" stroke-width="1.5"/>
+    <text x="130" y="89" fill="#f472b6" font-size="11" font-weight="600">Var B 50%</text>
+
+    <circle cx="120" cy="15" r="5" fill="#38bdf8" class="pulse-node"/>
+    <circle cx="120" cy="85" r="5" fill="#f43f5e" class="pulse-node"/>
+  </g>
+
+  <!-- Foreground Title and Subtitle Area -->
+  <g transform="translate(600, 115)" text-anchor="middle">
+    <!-- Category Pill Badge -->
+    <rect x="-160" y="-35" width="320" height="28" rx="14" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.2" opacity="0.95"/>
+    <text x="0" y="-17" fill="#c7d2fe" font-size="12" font-weight="700" letter-spacing="1.5">🚀 ENTERPRISE &amp; OPEN-SOURCE ECOSYSTEM</text>
+
+    <!-- Main Title -->
+    <text x="0" y="45" fill="#ffffff" font-size="44" font-weight="900" letter-spacing="-0.5" filter="url(#subtle-shadow)">
+      Awesome Feature Flagging
+    </text>
+    <text x="0" y="98" fill="url(#primary-glow)" font-size="44" font-weight="900" letter-spacing="-0.5">
+      &amp; Experimentation
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="142" fill="#94a3b8" font-size="16" font-weight="500" letter-spacing="0.2">
+      Curated directory of modern feature flags, progressive delivery, and statistical A/B testing platforms
+    </text>
+
+    <!-- Stat Highlights / Micro Badges -->
+    <g transform="translate(0, 180)">
+      <!-- Pill 1: SaaS Leaders -->
+      <rect x="-240" y="0" width="145" height="30" rx="15" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <circle cx="-225" cy="15" r="4" fill="#10b981"/>
+      <text x="-212" y="20" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="start">SaaS Giants</text>
+
+      <!-- Pill 2: Open Source -->
+      <rect x="-75" y="0" width="150" height="30" rx="15" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <circle cx="-60" cy="15" r="4" fill="#8b5cf6"/>
+      <text x="-48" y="20" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="start">Self-Hosted OSS</text>
+
+      <!-- Pill 3: OpenFeature -->
+      <rect x="95" y="0" width="145" height="30" rx="15" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <circle cx="110" cy="15" r="4" fill="#06b6d4"/>
+      <text x="122" y="20" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="start">OpenFeature SDKs</text>
+    </g>
+  </g>
+</svg>

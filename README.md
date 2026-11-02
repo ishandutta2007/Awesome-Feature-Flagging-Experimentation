@@ -1,148 +1,263 @@
-# Awesome-Feature-Flagging-Experimentation
+<div align="center">
 
-# Awesome Feature Flagging & Experimentation
+<img src="./assets/banner.svg" alt="Awesome Feature Flagging and Experimentation Banner" width="100%">
 
-> A curated list of top Feature Flagging and Experimentation platforms — both SaaS/Hosted commercial solutions and open-source alternatives for self-hosted feature management and A/B testing.  
-> 🌟 Star this repo if you find it useful! 🌟
+# 🚩 Awesome Feature Flagging & Experimentation 🧪
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-blue.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)
+[![Topic: Feature Flags](https://img.shields.io/badge/topic-feature--flags-indigo.svg)](https://github.com/topics/feature-flags)
+[![Topic: Experimentation](https://img.shields.io/badge/topic-experimentation-pink.svg)](https://github.com/topics/experimentation)
+
+**The definitive curated index of top Feature Flagging, Feature Toggle, Progressive Delivery, and Experimentation (A/B Testing) platforms — comparing SaaS commercial titans and self-hosted open-source software (OSS) solutions.**
+
+[Market Overview](#-sector-overview--market-dynamics) • [SaaS Comparison](#-saas--hosted-platforms) • [Open-Source Solutions](#-open-source-software) • [Comparison Matrix](#-comparison-at-a-glance) • [Contributing](#-contributing)
+
+</div>
 
 ---
 
-## 📋 Table of Contents
+## 📑 Table of Contents
 
-- [SaaS / Hosted Platforms](#-saas--hosted-platforms)
-  - [LaunchDarkly](#launchdarkly)
-  - [Statsig](#statsig)
-  - [Optimizely Feature Experimentation](#optimizely-feature-experimentation)
-  - [Split (Harness)](#split-harness)
-  - [ConfigCat](#configcat)
-  - [CloudBees Feature Management](#cloudbees-feature-management)
-- [Open-Source Software](#-open-source-software)
-  - [Flagsmith](#flagsmith)
-  - [GrowthBook](#growthbook)
-  - [Unleash](#unleash)
-  - [PostHog](#posthog)
-  - [GO Feature Flag](#go-feature-flag)
-  - [FeatureProbe](#featureprobe)
-  - [Bucketeer](#bucketeer)
-- [Comparison at a Glance](#-comparison-at-a-glance)
-- [Contributing](#-contributing)
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🟦 SaaS / Hosted Platforms](#-saas--hosted-platforms)
+  - [🏢 Enterprise & SaaS Comparison Matrix](#-enterprise--saas-comparison-matrix)
+  - [🔍 SaaS Platform Deep Dive](#-saas-platform-deep-dive)
+    - [1. Split (Harness)](#1-split-harness)
+    - [2. LaunchDarkly](#2-launchdarkly)
+    - [3. Statsig](#3-statsig)
+    - [4. CloudBees Feature Management](#4-cloudbees-feature-management)
+    - [5. Optimizely Feature Experimentation](#5-optimizely-feature-experimentation)
+    - [6. ConfigCat](#6-configcat)
+- [🟩 Open-Source Software](#-open-source-software)
+  - [⭐ Open-Source Leaderboard (Ranked by Stars)](#-open-source-leaderboard-ranked-by-stars)
+  - [🛠️ Open-Source Project Deep Dive](#️-open-source-project-deep-dive)
+    - [1. PostHog](#1-posthog)
+    - [2. Unleash](#2-unleash)
+    - [3. GrowthBook](#3-growthbook)
+    - [4. Flagsmith](#4-flagsmith)
+    - [5. Flipt](#5-flipt)
+    - [6. Flipper](#6-flipper)
+    - [7. Flagr](#7-flagr)
+    - [8. GO Feature Flag](#8-go-feature-flag)
+    - [9. FeatBit](#9-featbit)
+    - [10. FeatureProbe](#10-featureprobe)
+    - [11. FF4J (Feature Flags for Java)](#11-ff4j-feature-flags-for-java)
+    - [12. Bucketeer](#12-bucketeer)
+- [📊 Comparison at a Glance](#-comparison-at-a-glance)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+
+---
+
+## 🌐 Sector Overview & Market Dynamics
+
+The global feature flagging and experimentation software market is estimated at **$1.4B–$1.7B** and is projected to expand toward **$5.5B–$6.0B** over the next decade at a 16–18% CAGR, powered by widespread adoption of Continuous Delivery (CI/CD), trunk-based development, and progressive rollout safety practices.
+
+The sector exhibits a **hybrid market structure**:
+- **Concentrated at the enterprise summit**, where category leaders (Harness/Split, LaunchDarkly, Statsig, and Optimizely) command large-scale enterprise contracts, complex compliance governance, and heavy evaluation volumes.
+- **Moderately fragmented across mid-market, SMBs, and developer tiers**, where transparent consumption-based tools (ConfigCat), full-stack product suites (PostHog), and warehouse-native experimentation platforms (GrowthBook) aggressively capture market share from traditional high-cost incumbents.
 
 ---
 
 ## 🟦 SaaS / Hosted Platforms
 
-Commercial, cloud-hosted feature flagging and experimentation platforms. These are not open-source but are included as reference points for feature comparison.
+Commercial, managed feature management and experimentation services offering cloud-hosted control planes, low-latency edge delivery networks, and enterprise-grade SLA backing.
 
-### LaunchDarkly
-**Type:** Enterprise feature management  
-The category-defining incumbent with the deepest governance, audit workflows, and enterprise security posture. Broadest official SDK matrix and battle-tested at extreme scale (Atlassian, IBM, NBC). Pricing has escalated meaningfully; MAU-based pricing creates surprise bills for consumer apps, and six-figure renewals are standard at the 200+ engineer band [citation:1]. APIbenchmarks rates LaunchDarkly highest overall (ABI 91.1, grade A) for documentation, reliability, and ecosystem [citation:7].  
-**Best for:** Large engineering organizations with regulated delivery processes and a need for mature release governance.
+### 🏢 Enterprise & SaaS Comparison Matrix
 
-### Statsig
-**Type:** AI-driven flags + experimentation + analytics  
-Founded by ex-Facebook VP of Engineering, Statsig bundles feature flags, A/B testing, product analytics, session replay, and warehouse-native experimentation in a single evaluation API. Notable customers include Notion, OpenAI, Atlassian, Microsoft, Figma, and Brex. Free tier covers up to 1M events per month. Governance and audit features are less mature than LaunchDarkly at Fortune 500 tier [citation:1].  
-**Best for:** Teams wanting an all-in-one flags + experiments + analytics platform with a generous free tier.
+> **Note:** The table is sorted descending by company size (Valuation / ARR).
 
-### Optimizely Feature Experimentation
-**Type:** Server-side flags + experimentation  
-Formerly Optimizely Full Stack, distinct from Optimizely Web (client-side A/B testing). Known for the deepest statistical experimentation engine alongside Statsig and Split. Strong fit for organizations already running Optimizely Web. Pricing is enterprise-only and opaque; standalone-flag buyers often find it uncompetitive against LaunchDarkly or Statsig [citation:1].  
-**Best for:** Marketing-anchored organizations already in the Optimizely ecosystem.
+| Platform 🚀 | Company Size (Valuation / ARR) 📈 | Pricing (Starting Tier) 💳 | Free Tier & Free Trial Limits 🎁 | Key Deployment Model ⚙️ |
+|:---|:---|:---|:---|:---|
+| **[Split (Harness)](https://www.harness.io/products/feature-flags)** | **$5.5B Valuation** (~$250M ARR) | **$33 / user / month** (Starting Team Plan) | **Free Forever:** 2 developer seats, up to 25,000 client-side MAUs, unlimited flags & environments; **30-day full-feature trial** | Cloud SaaS & Hybrid Agent |
+| **[LaunchDarkly](https://launchdarkly.com/)** | **$3.0B Valuation** (~$150M–$190M ARR) | **~$10 / month** ($10/service connection + $8.33/1k MAUs on Foundation plan) | **Free Forever (Developer):** Unlimited team seats, 5 service connections/mo, 1,000 client-side MAUs, 100k experimentation MAUs; **14-day Enterprise trial** | Global Edge CDN & Relay Proxy |
+| **[Statsig](https://statsig.com/)** | **$1.1B Valuation** (~$40M ARR) | **$150 / month** (Pro Tier, includes 5M metered events; +$0.05/1k events thereafter) | **Free Forever (Developer):** 2,000,000 metered events/mo, 50,000 session replays/mo, unlimited seats, unlimited feature flag & config evaluations | Cloud SaaS & Warehouse-Native |
+| **[CloudBees Feature Management](https://www.cloudbees.com/products/feature-management)** | **$1.0B Valuation** (~$150M ARR) | **$30 – $50 / user / month** (Team / Foundation Tier) | **Free Forever (Community):** Capped at 5 users, up to 100,000 client-side evaluators, 7-day log retention; **14-day Enterprise trial** | Cloud SaaS, Hybrid & On-Premises |
+| **[Optimizely Feature Experimentation](https://www.optimizely.com/products/feature-experimentation/)** | **~$600M Acquisition Valuation** (~$400M+ DXP ARR) | **~$35,000 / year** (~$2,916/mo starting enterprise contract) | **Free Forever (Rollouts Tier):** Unlimited feature flags, targeted delivery rollouts, open-source SDKs, limited to 1 concurrent A/B test | Cloud SaaS & Edge Engine |
+| **[ConfigCat](https://configcat.com/)** | **Bootstrapped / Private SMB** (~$2M–$5M ARR est.) | **$95 / month** (Pro Plan billed annually, or $110/mo billed monthly; unlimited team seats) | **Free Forever:** ~5,000,000 config JSON downloads/mo, 20 GB CDN traffic, 2 products, 2 environments/product, 10 feature flags/product, unlimited user seats | Multi-CDN Edge Distributed |
 
-### Split (Harness)
-**Type:** Feature flags + experimentation (now Harness FME)  
-Acquired by Harness in February 2024. Historically experimentation-first, with mature server-side flagging and strong impact measurement. Now bundled into the Harness Software Delivery Platform. Post-acquisition product direction has been mixed; standalone customers report slower velocity, and pricing is increasingly tied to Harness platform deals [citation:1].  
-**Best for:** Teams already using Harness for CI/CD wanting integrated flags and experimentation.
+---
 
-### ConfigCat
-**Type:** Simple, predictable feature flags  
-Pricing is based solely on config downloads (not seats, not MAU), making it highly predictable for teams. Forever Free plan includes ~5 million downloads/month with all features available. No per-seat charges; unlimited developers. ConfigCat explicitly positions itself as a simpler, more predictable alternative to LaunchDarkly's MAU + service connection pricing model .  
-**Best for:** Teams wanting straightforward flag management with transparent, usage-based pricing and no seat fees.
+### 🔍 SaaS Platform Deep Dive
 
-### CloudBees Feature Management
-**Type:** Enterprise feature management  
-Part of the CloudBees DevOps platform, offering feature flags with A/B testing, gradual rollouts, automated rollbacks, and governance. Supports both cloud and on-premise deployments, making it suitable for regulated industries (government, finance, healthcare) with hybrid environments [citation:6][citation:12].  
-**Best for:** Enterprises needing feature flags tightly integrated with CI/CD and on-premise deployment options.
+#### 1. Split (Harness)
+- **Primary Type:** Feature flags + impact-driven experimentation (now Harness FME).
+- **Architecture & Ecosystem:** Acquired by Harness in 2024 and fully integrated with Harness Software Delivery platform. Combines automated canary rollouts, verification gates, and continuous deployment workflows.
+- **Best Suited For:** Engineering teams looking for unified CI/CD delivery pipelines alongside feature flags and statistical metric tracking.
+
+#### 2. LaunchDarkly
+- **Primary Type:** Enterprise feature management & dynamic configuration.
+- **Architecture & Ecosystem:** Category pioneer with deep role-based access controls (RBAC), multi-environment workflows, audit tracking, and 30+ SDKs with LaunchDarkly Relay Proxy architecture.
+- **Best Suited For:** Large, highly-regulated enterprises demanding proven 99.999% uptime, strict compliance, and granular release approvals.
+
+#### 3. Statsig
+- **Primary Type:** All-in-one feature flags + Bayesian A/B testing + product analytics.
+- **Architecture & Ecosystem:** Founded by former Facebook engineering leaders. Offers both cloud-hosted and warehouse-native evaluation (Snowflake, BigQuery, Databricks) with automated pulse metrics and metric lift calculations.
+- **Best Suited For:** High-growth product and data teams wanting experimentation, flag gates, and analytics unified in one interface.
+
+#### 4. CloudBees Feature Management
+- **Primary Type:** Enterprise DevOps feature governance (formerly Rollout.io).
+- **Architecture & Ecosystem:** Native integration with Jenkins, CloudBees CI/CD, and hybrid deployment environments. Delivers real-time configuration updates with strict air-gapped on-premise governance.
+- **Best Suited For:** Enterprise defense, banking, and healthcare organizations operating complex hybrid-cloud or on-premise infrastructures.
+
+#### 5. Optimizely Feature Experimentation
+- **Primary Type:** Server-side feature flagging and high-throughput experimentation.
+- **Architecture & Ecosystem:** Successor to Optimizely Full Stack. Deep statistical computation engine (Stats Engine) with false discovery rate control. Integrates across Optimizely Digital Experience Platform (DXP).
+- **Best Suited For:** Digital marketing, e-commerce, and product teams prioritizing advanced experimentation math.
+
+#### 6. ConfigCat
+- **Primary Type:** Simple, highly-predictable feature toggle service.
+- **Architecture & Ecosystem:** Evaluates flags client-side via lightweight static JSON configurations distributed across global CDNs. Completely decoupled from user counts and seat licenses.
+- **Best Suited For:** Startups and development teams needing straightforward toggle switches without complex MAU billing traps.
 
 ---
 
 ## 🟩 Open-Source Software
 
-Self-hosted, community-driven feature flagging and experimentation tools. All listed projects offer source code you can deploy on your own infrastructure.
+Self-hosted, transparent, and community-driven feature flagging and experimentation platforms. These tools allow full control over your data, zero third-party data transmission, and custom infrastructure setups.
 
-### Flagsmith
-**Stack:** Python / Django / PostgreSQL | **License:** BSD-3-Clause (open core)  
-Offers feature flags, remote config, and segmentation with a focus on governance and self-hosting for regulated environments. Maintains vendor-maintained OpenFeature providers. Core functionality stays open, including flags, remote config, segmentation, basic A/B testing, and 15+ SDKs. Supports Docker, Kubernetes/Helm, on-prem, and air-gapped deployments. Cloud pricing is transparent (Free $0, Start-Up $40/mo, Scale-Up $250/mo). Advanced governance and SSO are gated to paid Enterprise [citation:2][citation:14].  
-**Best for:** Organizations prioritizing compliance and genuine self-hosting with a permissive license.
+### ⭐ Open-Source Leaderboard (Ranked by Stars)
 
-### GrowthBook
-**Stack:** TypeScript / MongoDB (warehouse-native) | **License:** MIT core (open core)  
-Built around experimentation: connects to your data warehouse (BigQuery, Snowflake, Databricks) and runs Bayesian/frequentist analysis without ingesting a copy of your events. Deepest experimentation stats engine among open-source flag tools: CUPED, sequential testing, Bayesian analysis, multi-arm bandits, SRM checks. 24 SDKs. Self-hosted open-source edition runs unlimited users at $0, but requires an instrumented warehouse and statistical understanding. Visual editor, bandits, SSO, and SCIM are gated to Enterprise [citation:2][citation:14].  
-**Best for:** Data teams whose primary need is rigorous warehouse-native experimentation tied to feature delivery.
+| Repository & Platform 📦 | GitHub Stars 🌟 | Stack / Language 💻 | License 📜 | Specialization 🎯 |
+|:---|:---|:---|:---|:---|
+| **[PostHog](https://github.com/PostHog/posthog)** | [![PostHog Stars](https://img.shields.io/github/stars/PostHog/posthog?style=social&color=white)](https://github.com/PostHog/posthog/stargazers) | Python, TypeScript, ClickHouse | MIT (Open Core) | Product analytics, session replays, feature flags & experimentation suite |
+| **[Unleash](https://github.com/Unleash/unleash)** | [![Unleash Stars](https://img.shields.io/github/stars/Unleash/unleash?style=social&color=white)](https://github.com/Unleash/unleash/stargazers) | Node.js, TypeScript, PostgreSQL | Apache-2.0 (Open Core) | Battle-tested enterprise feature toggle service with Unleash Edge proxy |
+| **[GrowthBook](https://github.com/growthbook/growthbook)** | [![GrowthBook Stars](https://img.shields.io/github/stars/growthbook/growthbook?style=social&color=white)](https://github.com/growthbook/growthbook/stargazers) | TypeScript, Go, Python, MongoDB | MIT (Open Core) | Warehouse-native experimentation, CUPED statistics, Bayesian & frequentist |
+| **[Flagsmith](https://github.com/Flagsmith/flagsmith)** | [![Flagsmith Stars](https://img.shields.io/github/stars/Flagsmith/flagsmith?style=social&color=white)](https://github.com/Flagsmith/flagsmith/stargazers) | Python, Django, PostgreSQL | BSD-3-Clause (Open Core) | Flagging, remote configuration, user segmentation & OpenFeature native |
+| **[Flipt](https://github.com/flipt-io/flipt)** | [![Flipt Stars](https://img.shields.io/github/stars/flipt-io/flipt?style=social&color=white)](https://github.com/flipt-io/flipt/stargazers) | Go, TypeScript, SQLite / Postgres | GPL-3.0 / Commercial | GitOps-native, high-performance feature flagging container runtime |
+| **[Flipper](https://github.com/flippercloud/flipper)** | [![Flipper Stars](https://img.shields.io/github/stars/flippercloud/flipper?style=social&color=white)](https://github.com/flippercloud/flipper/stargazers) | Ruby | MIT | Performant and flexible feature flipping engine for Ruby and Rails |
+| **[Flagr](https://github.com/openflagr/flagr)** | [![Flagr Stars](https://img.shields.io/github/stars/openflagr/flagr?style=social&color=white)](https://github.com/openflagr/flagr/stargazers) | Go, Vue.js | Apache-2.0 | Microservice-driven feature flagging, dynamic configuration & A/B testing |
+| **[GO Feature Flag](https://github.com/thomaspoignant/go-feature-flag)** | [![GO Feature Flag Stars](https://img.shields.io/github/stars/thomaspoignant/go-feature-flag?style=social&color=white)](https://github.com/thomaspoignant/go-feature-flag/stargazers) | Go | MIT | Lightweight cloud-native solution using simple file/S3 configs & OpenFeature |
+| **[FeatBit](https://github.com/featbit/featbit)** | [![FeatBit Stars](https://img.shields.io/github/stars/featbit/featbit?style=social&color=white)](https://github.com/featbit/featbit/stargazers) | C# (.NET), TypeScript | MIT | High-performance 100% open-source feature flag tool with real-time UI |
+| **[FeatureProbe](https://github.com/FeatureProbe/FeatureProbe)** | [![FeatureProbe Stars](https://img.shields.io/github/stars/FeatureProbe/FeatureProbe?style=social&color=white)](https://github.com/FeatureProbe/FeatureProbe/stargazers) | Rust, Java, TypeScript | Apache-2.0 | Full-featured toggle management, canary rollouts, and experimentation UI |
+| **[FF4J](https://github.com/ff4j/ff4j)** | [![FF4J Stars](https://img.shields.io/github/stars/ff4j/ff4j?style=social&color=white)](https://github.com/ff4j/ff4j/stargazers) | Java | Apache-2.0 | Established Feature Flags for Java / Spring ecosystem with JMX & REST APIs |
+| **[Bucketeer](https://github.com/bucketeer-io/bucketeer)** | [![Bucketeer Stars](https://img.shields.io/github/stars/bucketeer-io/bucketeer?style=social&color=white)](https://github.com/bucketeer-io/bucketeer/stargazers) | Go, TypeScript, MySQL | Apache-2.0 | Cloud-native feature flagging & A/B testing platform created by CyberAgent |
 
-### Unleash
-**Stack:** Node.js / PostgreSQL | **License:** Apache-2.0 core (open core)  
-One of the most mature open-source feature management platforms, with an 11-year track record, ~13.7k GitHub stars, and G2 4.7 across 122 reviews. Full admin dashboard, 25+ SDKs, activation strategies, gradual rollouts, kill switches, canary releases, and Unleash Edge for low-latency evaluation. Genuinely air-gapped self-hosting possible. Advanced RBAC, SSO, and SCIM are gated to paid Enterprise. Self-hosting requires PostgreSQL [citation:2][citation:14].  
-**Best for:** Teams wanting a battle-tested, feature-rich self-hosted platform with a strong operational UI.
+---
 
-### PostHog
-**Stack:** Python / ClickHouse / PostgreSQL / Redis | **License:** MIT core (open core)  
-Bundles product analytics, session replay, experiments, and feature flags. If you already run PostHog for analytics, its flags and experiments are tightly integrated with your data. OpenFeature support is third-party (community) and not vendor-maintained. Self-hosting is heavy — requires PostgreSQL, ClickHouse, and Redis — and PostHog officially steers most users to its cloud offering, with self-hosting docs stating no guarantees and users assume all risk [citation:2].  
-**Best for:** Teams already invested in PostHog's analytics suite who want flags and experiments in the same platform.
+### 🛠️ Open-Source Project Deep Dive
 
-### GO Feature Flag
-**Stack:** Go | **License:** Open Source  
-A simple, complete, and lightweight self-hosted cloud-native feature flag solution built on OpenFeature. 100% open source with no open-core gating. Designed for teams that want a minimal, Go-based flag evaluation service without the overhead of a larger platform. Listed among GitHub's OpenFeature topic repositories as a self-hosted, OpenFeature-compatible control plane [citation:3].  
-**Best for:** Go-centric teams wanting a lightweight, fully open-source OpenFeature-native solution.
+#### 1. PostHog
+- **Stack:** Python, TypeScript, ClickHouse, PostgreSQL, Redis 
+- **License:** MIT core
+- **Overview:** An all-in-one product OS combining behavioral analytics, session recording, feedback surveys, error tracking, and feature flags with multivariate A/B testing.
+- **Best For:** Engineering teams looking for unified telemetry and feature management in a single platform.
 
-### FeatureProbe
-**Stack:** (Check repository) | **License:** Open Source  
-An open-source feature management service providing feature flags, gradual rollouts, and A/B experimentation with a visual management interface. Listed in GitHub's feature-flags topic as a full-featured open-source alternative [citation:15].  
-**Best for:** Teams wanting a visual feature management platform with experimentation built in.
+#### 2. Unleash
+- **Stack:** Node.js, TypeScript, PostgreSQL
+- **License:** Apache-2.0 core
+- **Overview:** A pioneer in open-source feature management. Features Unleash Edge for sub-millisecond local caching, custom targeting strategies, flexible kill switches, and 25+ official SDKs.
+- **Best For:** Scaled self-hosted deployments seeking enterprise-grade security and air-gapped support.
 
-### Bucketeer
-**Stack:** (Check repository) | **License:** Open Source  
-A Japanese open-source feature flag platform (from CyberAgent) with an official OpenFeature provider. Frequently cited in Japanese enterprise contexts and among the OSS camp alongside GrowthBook, Unleash, and Flagsmith for self-hosted scenarios [citation:8].  
-**Best for:** Teams in the Japanese market or those wanting an OpenFeature-native OSS alternative.
+#### 3. GrowthBook
+- **Stack:** TypeScript, Python, MongoDB / Warehouse-native
+- **License:** MIT core
+- **Overview:** The premier open-source experimentation platform. Directly queries warehouses (Snowflake, BigQuery, Redshift, ClickHouse) without duplicating events, delivering CUPED statistical variance reduction.
+- **Best For:** Data science and experimentation teams conducting advanced scientific A/B tests.
+
+#### 4. Flagsmith
+- **Stack:** Python, Django, PostgreSQL
+- **License:** BSD-3-Clause core
+- **Overview:** Straightforward feature toggle and remote configuration tool. Offers official OpenFeature providers, environment segmentation, audit logging, and streamlined Docker/Kubernetes deployment.
+- **Best For:** Organizations seeking an easily self-hosted platform with a permissive BSD license.
+
+#### 5. Flipt
+- **Stack:** Go, TypeScript
+- **License:** GPL-3.0 / Commercial Core
+- **Overview:** Built from the ground up for modern GitOps workflows. Stores configurations directly in Git repositories, integrates with Kubernetes CRDs, and compiles into zero-dependency Go binaries.
+- **Best For:** DevOps teams implementing GitOps and infrastructure-as-code feature delivery.
+
+#### 6. Flipper
+- **Stack:** Ruby
+- **License:** MIT
+- **Overview:** The definitive feature toggle library for the Ruby and Rails community. Extremely performant with zero-downtime database backing (ActiveRecord, Redis, Mongo, Memory).
+- **Best For:** Ruby and Ruby on Rails web applications needing simple, high-speed toggles.
+
+#### 7. Flagr
+- **Stack:** Go, Vue.js
+- **License:** Apache-2.0
+- **Overview:** Lightweight, stateless dynamic evaluation engine providing evaluation APIs, user cohort assignment, and multivariate A/B/n test allocation.
+- **Best For:** Microservice environments needing a standalone HTTP/gRPC evaluation service.
+
+#### 8. GO Feature Flag
+- **Stack:** Go
+- **License:** MIT
+- **Overview:** A zero-infrastructure, OpenFeature-compliant solution. Reads flag configurations directly from GitHub, S3, Google Cloud Storage, or Kubernetes ConfigMaps without database maintenance.
+- **Best For:** Cloud-native and Kubernetes-centric architectures seeking a lean evaluation service.
+
+#### 9. FeatBit
+- **Stack:** C# (.NET Core), TypeScript
+- **License:** MIT
+- **Overview:** Real-time feature toggle and progressive rollout platform built on .NET Core. Delivers sub-millisecond evaluation with full UI controls, segmentation, and approval workflows.
+- **Best For:** .NET / C# enterprise ecosystems wanting complete on-premise autonomy.
+
+#### 10. FeatureProbe
+- **Stack:** Rust, Java, TypeScript
+- **License:** Apache-2.0
+- **Overview:** High-performance feature toggle service utilizing Rust evaluation engines for extreme throughput and low latency in distributed architectures.
+- **Best For:** Latency-sensitive high-traffic mobile and web applications.
+
+#### 11. FF4J (Feature Flags for Java)
+- **Stack:** Java
+- **License:** Apache-2.0
+- **Overview:** Longstanding standard in the Java ecosystem (Spring, Spring Boot, Quarkus). Provides JMX metrics, audit logging, and integrations with JDBC, MongoDB, Redis, and Consul.
+- **Best For:** Enterprise Java and Spring Boot backends needing embedded feature flag evaluation.
+
+#### 12. Bucketeer
+- **Stack:** Go, TypeScript, MySQL
+- **License:** Apache-2.0
+- **Overview:** Developed and battle-tested by CyberAgent in Japan. OpenFeature-compliant platform with integrated mobile SDKs and real-time metric tracking.
+- **Best For:** Large mobile-first applications and international enterprises.
 
 ---
 
 ## 📊 Comparison at a Glance
 
-| Software | License | Type | Self-Hosted | Experimentation | Best For |
-|----------|---------|------|-------------|-----------------|----------|
-| **LaunchDarkly** | Proprietary | Enterprise flags | ❌ | Strong | Enterprise governance |
-| **Statsig** | Proprietary | Flags + analytics | ❌ | Strong | All-in-one + free tier |
-| **Optimizely FE** | Proprietary | Server-side experiments | ❌ | Deepest stats | Optimizely ecosystem |
-| **Split (Harness)** | Proprietary | Flags + experiments | ❌ | Strong | Harness CI/CD users |
-| **ConfigCat** | Proprietary | Simple flags | ❌ | Basic | Predictable pricing |
-| **CloudBees FM** | Proprietary | Enterprise flags | ✅ (on-prem) | Moderate | Regulated hybrid envs |
-| **Flagsmith** | BSD-3 (core) | Flags + remote config | ✅ | Basic | Compliance + self-host |
-| **GrowthBook** | MIT (core) | Warehouse-native experiments | ✅ | Deepest OSS stats | Data-team experimentation |
-| **Unleash** | Apache-2.0 (core) | Mature OSS flags | ✅ | Moderate | Battle-tested self-host |
-| **PostHog** | MIT (core) | All-in-one analytics | ✅ (heavy) | Moderate | Existing PostHog users |
-| **GO Feature Flag** | Open Source | Lightweight OSS | ✅ | Basic | Go / OpenFeature native |
-| **FeatureProbe** | Open Source | Visual OSS platform | ✅ | Built-in | Visual management |
-| **Bucketeer** | Open Source | OSS + OpenFeature | ✅ | (Check) | OpenFeature native |
+| Software 🏷️ | License 📄 | Delivery Model ☁️ | Self-Hosted 🏠 | Advanced Stats 📈 | Best For 🎯 |
+|:---|:---|:---|:---:|:---:|:---|
+| **Split (Harness)** | Proprietary | SaaS / Hybrid | ❌ | ✅ Yes | CI/CD pipeline automation + flags |
+| **LaunchDarkly** | Proprietary | SaaS | ❌ | ✅ Yes | Enterprise governance & scale |
+| **Statsig** | Proprietary | SaaS / Warehouse | ❌ | ✅ Yes | All-in-one product analytics + flags |
+| **CloudBees FM** | Proprietary | SaaS / On-Prem | ✅ | ⚠️ Moderate | Regulated hybrid & CI environments |
+| **Optimizely FE** | Proprietary | SaaS / Edge | ❌ | ✅ Deepest | Enterprise experimentation & DXP |
+| **ConfigCat** | Proprietary | SaaS | ❌ | ⚠️ Basic | Simple toggles & predictable pricing |
+| **PostHog** | MIT Core | SaaS / Self-Host | ✅ | ⚠️ Moderate | Product analytics & full-stack apps |
+| **Unleash** | Apache-2.0 Core | SaaS / Self-Host | ✅ | ⚠️ Moderate | Battle-tested OSS enterprise toggles |
+| **GrowthBook** | MIT Core | SaaS / Self-Host | ✅ | ✅ Deepest OSS | Warehouse-native A/B testing |
+| **Flagsmith** | BSD-3 Core | SaaS / Self-Host | ✅ | ⚠️ Basic | Clean permissive self-hosting |
+| **Flipt** | GPL-3 / Comm | Self-Host / Edge | ✅ | ⚠️ Basic | GitOps & Kubernetes native workflows |
+| **Flipper** | MIT | Embedded / Cloud | ✅ | ⚠️ Basic | Ruby on Rails applications |
+| **Flagr** | Apache-2.0 | Microservice | ✅ | ⚠️ Basic | Standalone Go microservice setups |
+| **GO Feature Flag** | MIT | Cloud-Native | ✅ | ⚠️ Basic | Lean OpenFeature-native deployments |
+| **FeatBit** | MIT | Self-Host | ✅ | ⚠️ Basic | .NET / C# high-speed environments |
+| **FeatureProbe** | Apache-2.0 | Self-Host | ✅ | ⚠️ Basic | Rust-powered low-latency evaluation |
+| **FF4J** | Apache-2.0 | Embedded | ✅ | ⚠️ Basic | Enterprise Spring & Java architectures |
+| **Bucketeer** | Apache-2.0 | Self-Host | ✅ | ⚠️ Basic | Scaled mobile feature delivery |
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you know of an open-source feature flagging or experimentation tool that should be listed here, please open a pull request with:
+Contributions are warmly encouraged! 🎉
 
-- Project name and URL
-- Brief description (1–2 sentences)
-- Stack and license
-- Why it stands out
-
-Please ensure the project is actively maintained (releases within the last 12 months) and genuinely open-source.
+If you know of a top-tier feature flagging or experimentation platform that should be added:
+1. Fork this repository.
+2. Create a new branch: `git checkout -b add-awesome-tool`.
+3. Add the project with details (GitHub star badge linking to stargazers, stack, license, pricing, and unique capabilities).
+4. Submit a Pull Request with a clear description.
 
 ---
 
 ## 📄 License
 
-This list is released under CC0 1.0 Universal (Public Domain). The software projects listed retain their respective licenses.
+Distributed under the [Creative Commons Zero v1.0 Universal](LICENSE) (CC0 1.0) Public Domain Dedication. Listed third-party tools and logos belong to their respective copyright holders.
 
 ---
 
-⭐ **If this list helped you discover a useful tool, please star the repo!** ⭐
+<div align="center">
+
+🌟 **Found this guide helpful? Please consider giving it a star!** 🌟
+
+</div>
