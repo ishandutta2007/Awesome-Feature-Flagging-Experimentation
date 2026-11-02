@@ -265,7 +265,7 @@ Contributions are warmly encouraged! 🎉
 If you know of a top-tier feature flagging or experimentation platform that should be added:
 1. Fork this repository.
 2. Create a new branch: `git checkout -b add-awesome-tool`.
-3. Add the project with details (GitHub Stars_Badge linking to stargazers, stack, license, pricing, and unique capabilities).
+3. Add the project with details (GitHub_Stars_Badge linking to stargazers, stack, license, pricing, and unique capabilities).
 4. Submit a Pull Request with a clear description.
 
 ---
